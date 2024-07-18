@@ -8,8 +8,9 @@ import AppLayout from './pages/AppLayout';
 import LogIn from './pages/Login';
 import PageNotFound from './pages/PageNotFound';
 import CityList from './components/CityList.jsx';
-import City from './components/City.jsx';
 import CountryList from './components/CountryList.jsx';
+import City from './components/City.jsx';
+import Form from './components/Form.jsx';
 
 const BASE_URL = 'http://localhost:8000';
 
@@ -52,7 +53,7 @@ function App() {
           />
           <Route path="cities/:id" element={<City />} />
           <Route path="countries" element={<CountryList cities={cities} />} />
-          <Route path="form" element={<p>Form</p>} />
+          <Route path="form" element={<Form />} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
