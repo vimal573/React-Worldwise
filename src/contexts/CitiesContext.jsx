@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
 const CitiesContext = createContext();
 
@@ -38,4 +38,12 @@ function CitiesProvider({ children }) {
   );
 }
 
-export { CitiesProvider };
+function useCities() {
+  const context = useContext(CitiesContext);
+  if (context === undefined)
+    throw new Error('PostContext was used outside of the PostProvider');
+
+  return context;
+}
+
+export { CitiesProvider, useCities };
