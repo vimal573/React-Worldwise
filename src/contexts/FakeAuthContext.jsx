@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { children, createContext, useContext, useReducer } from 'react';
+import { createContext, useContext, useReducer } from 'react';
 
 const AuthContext = createContext();
 
